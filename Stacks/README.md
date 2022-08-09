@@ -1,1 +1,0 @@
-Stack file from ALgoExpert project
