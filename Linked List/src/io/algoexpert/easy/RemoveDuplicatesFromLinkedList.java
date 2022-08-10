@@ -1,7 +1,5 @@
 package io.algoexpert.easy;
 
-import io.algoexpert.medium.RemoveNthNodeFromEnd;
-
 public class RemoveDuplicatesFromLinkedList {
 
     private Node head;
