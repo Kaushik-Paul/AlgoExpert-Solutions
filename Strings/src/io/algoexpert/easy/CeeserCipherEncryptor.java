@@ -12,13 +12,13 @@ public class CeeserCipherEncryptor {
     }
 
     private  char getNewLetter(char ch, int key) {
-        int num = ch;
-        num = num + key;
+        int num = ch + key;
         if (num > 122) {
-//            num = 96 + (num % 122);
             num = num - 26;
+        } else if (num < 97) {
+            num = num + 26;
         }
-        return (char) (num);
+        return (char) num;
     }
 
     public static void main(String[] args) {
