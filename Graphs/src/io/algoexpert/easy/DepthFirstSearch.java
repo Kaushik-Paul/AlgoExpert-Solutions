@@ -5,7 +5,6 @@ import io.algoexpert.Graphs;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.ListIterator;
 
 public class DepthFirstSearch {
 
@@ -19,9 +18,8 @@ public class DepthFirstSearch {
     private void DFSUtil(List<Integer> s, int num, LinkedHashMap<Integer, List<Integer>> map) {
         s.add(num);
         if (!map.get(num).isEmpty()) {
-            ListIterator<Integer> iterator = map.get(num).listIterator();
-            while (iterator.hasNext()) {
-                DFSUtil(s, iterator.next(), map);
+            for (Integer integer : map.get(num)) {
+                DFSUtil(s, integer, map);
             }
         }
     }
