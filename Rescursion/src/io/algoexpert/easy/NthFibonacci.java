@@ -21,6 +21,7 @@ public class NthFibonacci {
         return fibonacciOld(num- 1) + fibonacciOld(num - 2);
     }
 
+    // O(n) time and O(n) space
     public int fibonacci(int num) {
         if (num <= 2) {
             return memory.get(num);
