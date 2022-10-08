@@ -10,7 +10,6 @@ public class LongestPeak {
         int i = 1;
         while (i < array.length - 1) {
             if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
-                currentPeakLength = 0;
                 leftIndex = i - 1;
                 while (array[leftIndex] > array[leftIndex - 1]) {
                     leftIndex--;
