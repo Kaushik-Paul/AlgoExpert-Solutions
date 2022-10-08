@@ -2,18 +2,12 @@ package io.algoexpert.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class MergeOverlappingIntervals {
 
     public static List<int[]> mergeOverlappingIntervals(int[][] array) {
-//        Arrays.sort(array, (first, second) -> {
-//            if (first[0] <= second[0]) {
-//                return 1;
-//            }
-//            return -1;
-//        });
+        Arrays.sort(array, (first, second) -> first[0] - second[0]);
 
         List<int[]> mergedIntervals = new ArrayList<>();
         int[] currentInterval = array[0];
